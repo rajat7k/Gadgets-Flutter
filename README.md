@@ -1,4 +1,4 @@
-# pracise_app_2
+# Gadgets
 
 A new Flutter project.
 
