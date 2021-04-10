@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pracise_app_2/models/product.dart';
+
+import 'package:pracise_app_2/models/product_model.dart';
 import 'package:pracise_app_2/pages/product_detail_page.dart';
-import 'package:pracise_app_2/widgets/theme.dart';
+import 'package:pracise_app_2/widgets/home_widgets/add_to_cart.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 class ProductList extends StatelessWidget {
@@ -54,30 +56,12 @@ class ProductItem extends StatelessWidget {
               alignment: MainAxisAlignment.spaceBetween,
               children: [
                 "\$${products.price}".text.bold.xl.make(),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.teal),
-                      shape: MaterialStateProperty.all(StadiumBorder())),
-                  child: Icon(CupertinoIcons.cart),
-                ).px16()
+                AddToCart(products: products).px16()
               ],
             ),
           ],
         ))
       ],
     )).color(context.cardColor).rounded.square(150).make().py16();
-  }
-}
-
-class ProductImage extends StatelessWidget {
-  final String image;
-
-  const ProductImage({Key key, @required this.image}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Image.network(
-      image,
-    ).box.rounded.p8.color(context.canvasColor).make().p16().w40(context);
   }
 }

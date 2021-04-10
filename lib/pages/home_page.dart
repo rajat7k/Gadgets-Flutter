@@ -8,7 +8,7 @@ import 'package:pracise_app_2/widgets/home_widgets/product_list.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pracise_app_2/models/product.dart';
+import 'package:pracise_app_2/models/product_model.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -40,10 +40,10 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           Navigator.pushNamed(context, MyRoutes.cartRoute);
         },
-        backgroundColor: context.theme.buttonColor,
+        backgroundColor: Colors.teal,
         child: Icon(
           CupertinoIcons.cart,
-          color: context.accentColor,
+          color: Colors.white,
         ),
       ),
       appBar: AppBar(
