@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pracise_app_2/models/product.dart';
 import 'package:pracise_app_2/pages/product_detail_page.dart';
@@ -46,7 +47,7 @@ class ProductItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            products.name.text.lg.color(MyTheme.darkBluishColor).make(),
+            products.name.text.lg.color(context.accentColor).make(),
             products.desc.text.textStyle(context.captionStyle).make(),
             5.heightBox,
             ButtonBar(
@@ -58,14 +59,14 @@ class ProductItem extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.teal),
                       shape: MaterialStateProperty.all(StadiumBorder())),
-                  child: "Buy".text.make(),
-                )
+                  child: Icon(CupertinoIcons.cart),
+                ).px16()
               ],
             ),
           ],
         ))
       ],
-    )).white.rounded.square(150).make().py16();
+    )).color(context.cardColor).rounded.square(150).make().py16();
   }
 }
 
@@ -77,6 +78,6 @@ class ProductImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.network(
       image,
-    ).box.rounded.p8.color(MyTheme.creamColor).make().p16().w40(context);
+    ).box.rounded.p8.color(context.canvasColor).make().p16().w40(context);
   }
 }

@@ -29,7 +29,10 @@ class HomeDrawer extends StatelessWidget {
               )),
           Divider(),
           ListTile(
-            leading: Icon(Icons.home),
+            leading: Icon(
+              Icons.home,
+              color: Theme.of(context).accentColor,
+            ),
             onTap: () {
               Navigator.pushNamed(context, MyRoutes.homeRoute);
             },
@@ -38,12 +41,18 @@ class HomeDrawer extends StatelessWidget {
               style: GoogleFonts.laila(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
+                color: Theme.of(context).accentColor,
               ),
             ),
           ),
-          Divider(),
+          Divider(
+            color: Theme.of(context).accentColor,
+          ),
           ListTile(
-            leading: new Icon(Icons.logout),
+            leading: new Icon(
+              Icons.logout,
+              color: Theme.of(context).accentColor,
+            ),
             onTap: () {
               Navigator.pushNamed(context, MyRoutes.loginRoute);
             },
@@ -52,17 +61,24 @@ class HomeDrawer extends StatelessWidget {
               style: GoogleFonts.laila(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
+                color: Theme.of(context).accentColor,
               ),
             ),
           ),
-          Divider(),
+          Divider(
+            color: Theme.of(context).accentColor,
+          ),
           ListTile(
-            leading: new Icon(Icons.settings),
+            leading: new Icon(
+              Icons.settings,
+              color: Theme.of(context).accentColor,
+            ),
             title: new Text(
               "Settings",
               style: GoogleFonts.laila(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
+                color: Theme.of(context).accentColor,
               ),
             ),
           ),

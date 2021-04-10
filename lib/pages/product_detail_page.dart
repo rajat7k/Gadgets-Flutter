@@ -10,21 +10,24 @@ class ProductDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: MyTheme.creamColor,
-      bottomNavigationBar: ButtonBar(
-        alignment: MainAxisAlignment.spaceBetween,
-        children: [
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Theme.of(context).accentColor),
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: context.canvasColor,
+      bottomNavigationBar: Container(
+        color: context.cardColor,
+        child: ButtonBar(alignment: MainAxisAlignment.spaceBetween, children: [
           "\$${products.price}".text.color(Colors.red).bold.xl4.make(),
           ElevatedButton(
             onPressed: () {},
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.teal),
                 shape: MaterialStateProperty.all(StadiumBorder())),
-            child: "Buy".text.xl2.make(),
-          ).wh(110, 60)
-        ],
-      ).p32(),
+            child: "Add to cart".text.xl2.make(),
+          ).wh(160, 55)
+        ]).p32(),
+      ),
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -39,18 +42,18 @@ class ProductDetailPage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
-                child: Column(
-                  children: [
-                    products.name.text.xl4
-                        .color(MyTheme.darkBluishColor)
-                        .make(),
-                    products.desc.text.xl2
-                        .textStyle(context.captionStyle)
-                        .make(),
-                  ],
-                ).py64(),
+                child: Column(children: [
+                  products.name.text.xl4.color(MyTheme.darkBluishColor).make(),
+                  products.desc.text.xl2.textStyle(context.captionStyle).make(),
+                  "This is dummy text.  Dolor dolore ipsum duo labore ut justo accusam et est sea, dolores dolor eos et aliquyam consetetur clita, nonumy tempor magna ipsum sadipscing rebum"
+                      .text
+                      .textStyle(context.captionStyle)
+                      .make()
+                      .px16()
+                      .py4()
+                ]).py64(),
               ),
             ))
           ],

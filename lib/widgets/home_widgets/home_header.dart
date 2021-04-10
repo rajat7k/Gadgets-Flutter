@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -14,9 +15,10 @@ class HomeHeader extends StatelessWidget {
             style: GoogleFonts.gloriaHallelujah(
               fontSize: 40.0,
               fontWeight: FontWeight.bold,
+              color: Theme.of(context).accentColor,
             ),
           ),
-          "Trending Products".text.xl2.make()
+          "Trending Products".text.color(context.accentColor).xl2.make()
         ],
       ),
     );

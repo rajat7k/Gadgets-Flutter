@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'package:flutter/cupertino.dart';
+import 'package:pracise_app_2/utlis/routes.dart';
 import 'package:pracise_app_2/widgets/home_widgets/home_drawer.dart';
 import 'package:pracise_app_2/widgets/home_widgets/home_header.dart';
 import 'package:pracise_app_2/widgets/home_widgets/product_list.dart';
-import 'package:pracise_app_2/widgets/theme.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,22 +36,30 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.cartRoute);
+        },
+        backgroundColor: context.theme.buttonColor,
+        child: Icon(
+          CupertinoIcons.cart,
+          color: context.accentColor,
+        ),
+      ),
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Theme.of(context).accentColor),
         toolbarHeight: 140.0,
         title: HomeHeader(),
+        backgroundColor: Colors.transparent,
       ),
       drawer: HomeDrawer(),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       body: SafeArea(
         child: Container(
           padding: Vx.m8,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // HomeHeader(),
-              // SizedBox(
-              //   height: 12,
-              // ),
               if (ProductModle.items != null && ProductModle.items.isNotEmpty)
                 ProductList().expand()
               else
