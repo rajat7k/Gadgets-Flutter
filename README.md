@@ -20,9 +20,7 @@ This is app also support dark mode.
 
 
 
-![Screenshot_1618156958](https://user-images.githubusercontent.com/63193296/114312095-096ec080-9b0f-11eb-8fb4-e5971f2a71d9.png)
-
-![Screenshot_1618156969](https://user-images.githubusercontent.com/63193296/114312114-24d9cb80-9b0f-11eb-8675-487e658d3ebd.png)
+![Screenshot_1618156958](https://user-images.githubusercontent.com/63193296/114312095-096ec080-9b0f-11eb-8fb4-e5971f2a71d9.png)   ![Screenshot_1618156969](https://user-images.githubusercontent.com/63193296/114312114-24d9cb80-9b0f-11eb-8675-487e658d3ebd.png)
 
 
 ![Screenshot_1618156984](https://user-images.githubusercontent.com/63193296/114312118-286d5280-9b0f-11eb-8a28-8d524d7c25cb.png)
