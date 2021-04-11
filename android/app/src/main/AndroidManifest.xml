@@ -2,7 +2,7 @@
     package="com.example.pracise_app_2">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="pracise_app_2"
+        android:label="gadgets"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
