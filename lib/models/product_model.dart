@@ -1,9 +1,4 @@
 class ProductModle {
-  static final productModel = ProductModle._internal();
-  ProductModle._internal();
-
-  factory ProductModle() => productModel;
-
   static List<Item> items;
 
   Item getById(int id) =>
